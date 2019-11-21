@@ -1,0 +1,47 @@
+{
+  "name": "apollo1",
+  "version": "1.0.0",
+  "description": "trying to run up an Apollo server",
+  "main": "./src/app.ts",
+  "scripts": {
+    "compile": "rm -rf /dist && npm run copyfiles && tsc",
+    "copyfiles": "copyfiles  \"src/**/*.ejs\" \"src/**/*.json\" dist -u 1",
+    "dev": "npm run compile && node --inspect .",
+    "dev2": "nodemon -e ts,graphql ./src/app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaimeCardenas176/Apollo1.git"
+  },
+  "keywords": [
+    "api",
+    "graphql",
+    "apollo",
+    "server"
+  ],
+  "author": "jaime cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaimeCardenas176/Apollo1/issues"
+  },
+  "homepage": "https://github.com/JaimeCardenas176/Apollo1#readme",
+  "dependencies": {
+    "apollo-server-express": "*",
+    "apollo-tracing": "*",
+    "body-parser": "*",
+    "copyfiles": "*",
+    "dotenv": "^8.2.0",
+    "express": "*",
+    "graphql": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/body-parser": "*",
+    "@types/express": "*",
+    "@types/graphql": "*",
+    "@types/node": "*",
+    "nodemon": "^2.0.0",
+    "ts-node": "^8.5.2"
+  }
+}
